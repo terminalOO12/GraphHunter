@@ -12,7 +12,7 @@
 ---
 
 
-## ⚙️ What is GraphHunter?
+## What is GraphHunter?
 
 **GraphHunter** is a Microsoft Entra ID (Azure AD) reconnaissance and intelligence tool built around the modern **Microsoft Graph API**.  
 It helps security professionals, red teamers, and IAM analysts explore and analyze Entra ID tenants through a clean, interactive web interface.
@@ -27,9 +27,9 @@ Everything runs locally — **no cloud dependencies, no data leaks, no telemetry
 
 ---
 
-## 🔑 Key Capabilities
+## Key Capabilities
 
-### 🧩 Unified Tenant Enumeration
+### Unified Tenant Enumeration
 - Enumerates all core Entra ID objects:
   - **Users**
   - **Groups**
@@ -40,7 +40,7 @@ Everything runs locally — **no cloud dependencies, no data leaks, no telemetry
   - **Administrative Units**
 - Fetches using Microsoft Graph API endpoints (`https://graph.microsoft.com/v1.0`).
 
-### 🖥️ Interactive Web Dashboard
+### Interactive Web Dashboard
 - Clean Flask-based web UI for browsing and searching directory objects.  
 - “Details” view shows linked relationships like:
   - User → Group Membership → Directory Role → Owned Applications.
@@ -48,7 +48,7 @@ Everything runs locally — **no cloud dependencies, no data leaks, no telemetry
 
 
 
-### 🧠 Local AI Integration (Experimental)
+### Local AI Integration (Experimental)
 - Connects to **Ollama** and runs **Llama 3.1 (8B)** locally.
 - Lets you query your data in natural language — all context stays on your machine.
 - Example prompts:
@@ -59,33 +59,33 @@ Everything runs locally — **no cloud dependencies, no data leaks, no telemetry
 
 ---
 
-## 💡 Why Use GraphHunter?
+## Why Use GraphHunter?
 
 | Reason | Description |
 |--------|--------------|
-| 🧠 **Modern Graph API Support** | Fully migrated from deprecated Azure AD Graph — future-proof. |
-| 🔍 **Deep Directory Insight** | Explore relationships between users, roles, and applications visually. |
-| ⚡ **Fast and Local** | No cloud dependencies — instant responses after prefetch. |
-| 🔒 **Privacy-First** | Keeps all Graph data local; perfect for red teaming or internal audits. |
-| 🧩 **AI-Assisted Analysis** | Ask questions in plain English, powered by Llama3.1 via Ollama. |
-| 🛠️ **Lightweight & Portable** | Single Python script + web UI — no complex setup. |
-| 🧰 **Ideal For** | Cloud Security Consultants, IAM Analysts, Red/Blue Teams, and Researchers. |
+| **Modern Graph API Support** | Fully migrated from deprecated Azure AD Graph — future-proof. |
+| **Deep Directory Insight** | Explore relationships between users, roles, and applications visually. |
+| **Fast and Local** | No cloud dependencies — instant responses after prefetch. |
+| **Privacy-First** | Keeps all Graph data local; perfect for red teaming or internal audits. |
+| **AI-Assisted Analysis** | Ask questions in plain English, powered by Llama3.1 via Ollama. |
+| **Lightweight & Portable** | Single Python script + web UI — no complex setup. |
+| **Ideal For** | Cloud Security Consultants, IAM Analysts, Red/Blue Teams, and Researchers. |
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 Follow these steps to install and run **GraphHunter** locally.
 
 ---
 
-### 🧩 1. Clone the Repository
+### 1. Clone the Repository
 ```bash
 git clone https://github.com/<your-username>/GraphHunter.git
 cd GraphHunter
 ```
 
-### 🐍 2. Create and Activate Virtual Environment
+### 2. Create and Activate Virtual Environment
 
 It’s recommended to use a Python virtual environment to keep dependencies isolated.
 ```bash
@@ -97,7 +97,7 @@ source venv/bin/activate       # Linux / macOS
 # OR
 venv\Scripts\activate          # Windows PowerShell
 ```
-### 📦 3. Install Python Dependencies
+### 3. Install Python Dependencies
 
 All required dependencies are listed in requirements.txt.
 ```bash
@@ -105,16 +105,16 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### 🤖 4. (Optional) Install Ollama for Local AI
+### 4. (Optional) Install Ollama for Local AI
 
 If you want to use local AI querying with Llama3.1, install Ollama
 .
 
-#### 🧰 Linux / macOS:
+#### Linux / macOS:
 ```bash
 curl -fsSL https://ollama.com/install.sh | sh
 ```
-#### 🪟 Windows:
+#### Windows:
 
 Download and install Ollama from:
 👉 https://ollama.com/download
@@ -124,7 +124,7 @@ Download and install Ollama from:
 ollama pull llama3.1:8b
 ```
 
-### 🚀 5. Run GraphHunter
+### 5. Run GraphHunter
 
 #### Start the web UI using your Microsoft Graph API token.
 ```bash
@@ -138,7 +138,7 @@ python3 script.py --token <GRAPH_TOKEN> --serve
 ---
 
 
-## ⚙️ Command-Line Options (actual)
+## Command-Line Options (actual)
 
 The following options reflect the exact CLI output from `python3 script.py -h` for **GraphHunter**.
 
@@ -183,13 +183,13 @@ python3 script.py --token "<GRAPH_TOKEN>" --serve --refresh --redact
 ```
 ---
 
-## 🖼️ Sample Output
+## Sample Output
 
 Below are example screenshots showing GraphHunter in action.
 
 ---
 
-### 🖥️ GraphHunter Web Portal
+### GraphHunter Web Portal
 
 The web interface provides an intuitive dashboard to explore your Microsoft Entra ID tenant data.  
 It displays users, groups, applications, service principals, roles, and more — all organized and searchable.
@@ -201,7 +201,7 @@ It displays users, groups, applications, service principals, roles, and more —
 
 ---
 
-### 🧠 Local AI Query (via Ollama)
+### Local AI Query (via Ollama)
 
 GraphHunter integrates with **Ollama + Llama3.1**, enabling you to ask natural language questions about your tenant data directly in the browser.
 
@@ -218,15 +218,15 @@ Example output:
 > 🧩 *All processing and reasoning happen locally — no cloud APIs or external calls are made. Your data and tokens stay fully under your control.*
 ---
 
-## 💬 Feedback & Contributions
+## Feedback & Contributions
 
 We welcome ideas, feature requests, and contributions from the community!  
 If you’d like to improve **GraphHunter**, please feel free to:
 
-- 🧠 **Open an Issue** — Report bugs, suggest features, or request enhancements.
-- 🛠️ **Submit a Pull Request** — Fork the repo, make your changes, and send a PR.
-- 💡 **Share Ideas** — Help shape new AI-driven or visualization features.
-- 🧩 **Discuss Improvements** — Join conversations about context building, UI/UX, and AI integrations.
+- **Open an Issue** — Report bugs, suggest features, or request enhancements.
+- **Submit a Pull Request** — Fork the repo, make your changes, and send a PR.
+- **Share Ideas** — Help shape new AI-driven or visualization features.
+- **Discuss Improvements** — Join conversations about context building, UI/UX, and AI integrations.
 
 > Contributions are appreciated — whether it’s code, documentation, testing, or just thoughtful feedback.  
 > Together, we can make GraphHunter even more intelligent, stable, and useful for the community.
